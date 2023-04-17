@@ -27,19 +27,16 @@ export class GameScene extends BaseScene {
         // rocket
         this.p1Rocket = new Rocket(this, WIDTH/2, HEIGHT - BORDER_UI_SIZE - BORDER_PADDING, 'rocket').setOrigin(0.5, 0);
 
-        // Listen to the events from controls plugin and do something. For example select a button in a start menu
-        this.events.on(EVENT_LEFT, () => console.log('LEFT'), this)
-        this.events.on(EVENT_RIGHT, () => console.log('RIGHT'), this)
-
         // This is the most complicated part, because you have to make sure that all event listeners will be removed when the scene shuts down
         this.events.once('shutdown', () => {
-            this.events.off(EVENT_LEFT, () => {}, this)
-            this.events.off(EVENT_RIGHT, () => {}, this)
+            this.events.off(EVENT_LEFT, null, this)
+            this.events.off(EVENT_RIGHT, null, this)
         })
 
     }
 
     update() {
         this.starfield.tilePositionX -= 4;
+        this.p1Rocket.update()
     }
 }

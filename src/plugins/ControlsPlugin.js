@@ -19,7 +19,7 @@ export class ControlsPlugin extends Plugins.ScenePlugin {
         }
     }
 
-    update () {
+    updateManually () {
         console.log("ControlsPlugin.update()")
         this._emitKeyEvent({ keys: this.keys.right, eventName: EVENT_RIGHT })
         this._emitKeyEvent({ keys: this.keys.left, eventName: EVENT_LEFT })
