@@ -35,8 +35,8 @@ export class GameScene extends BaseScene {
 
     }
 
-    update() {
-        this.starfield.tilePositionX -= 4;
-        this.p1Rocket.update()
-    }
+    // update() {
+    //     this.starfield.tilePositionX -= 4;
+    //     this.p1Rocket.update()
+    // }
 }
