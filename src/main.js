@@ -1,52 +1,22 @@
+import { Menu } from './scenes/menu';
+import { Play } from './scenes/play';
 import './style.css'
-import { Scene, Game, WEBGL } from 'phaser';
+import { Game, CANVAS } from 'phaser';
 
-const canvas = document.getElementById('game');
+const canvasElement = document.getElementById('game');
 
-class GameScene extends Scene {
-
-  constructor() {
-    super('scene-game');
-  }
-
-  create() {
-    this.textbox = this.add.text(
-      window.innerWidth / 2,
-      window.innerHeight / 2,
-      'Welcome to Phaser x Vite!',
-      {
-        color: '#FFF',
-        fontFamily: 'monospace',
-        fontSize: '26px'
-      }
-    );
-
-    this.textbox.setOrigin(0.5, 0.5);
-  }
-
-  update(time, delta) {
-    if (!this.textbox) {
-      return;
-    }
-
-    this.textbox.rotation += 0.0005 * delta;
-  }
-}
+export const WIDTH = 640
+export const HEIGHT = 480
+export const BORDER_UI_SIZE = HEIGHT / 15
+export const BORDER_PADDING = BORDER_UI_SIZE / 3
 
 const config = {
-  type: WEBGL,
-  width: window.innerWidth,
-  height: window.innerHeight,
-  canvas,
-  physics: {
-    default: 'arcade',
-    arcade: {
-      gravity: { y: 0 },
-      // debug: true
-    }
-  },
+  type: CANVAS,
+  width: WIDTH,
+  height: HEIGHT,
+  canvas: canvasElement,
   scene: [
-    GameScene
+    Menu, Play
   ]
 }
 
