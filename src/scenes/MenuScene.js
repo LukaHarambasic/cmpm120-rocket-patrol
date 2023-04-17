@@ -1,12 +1,12 @@
-import { Scene } from 'phaser';
+import { BaseScene } from '../BaseScene';
 
-export class Menu extends Scene {
+export class MenuScene extends BaseScene {
     constructor() {
         super("menuScene");
     }
 
     create() {
         this.add.text(20, 20, "Rocket Patrol Menu");
-        this.scene.start("playScene");
+        this.scene.start("gameScene");
     }
 }

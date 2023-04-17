@@ -1,5 +1,5 @@
-import { Menu } from './scenes/menu';
-import { Play } from './scenes/play';
+import { MenuScene } from './scenes/MenuScene';
+import { GameScene } from './scenes/GameScene';
 import './style.css'
 import { Game, CANVAS } from 'phaser';
 
@@ -10,14 +10,14 @@ export const HEIGHT = 480
 export const BORDER_UI_SIZE = HEIGHT / 15
 export const BORDER_PADDING = BORDER_UI_SIZE / 3
 
-const config = {
+const CONFIG = {
   type: CANVAS,
   width: WIDTH,
   height: HEIGHT,
   canvas: canvasElement,
   scene: [
-    Menu, Play
+    MenuScene, GameScene
   ]
 }
 
-new Game(config);
+new Game(CONFIG);
