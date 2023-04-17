@@ -15,7 +15,7 @@
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
-    "phaser": "^3.55.2",
+    "phaser": "^3.6.0",
     "prettier": "^2.8.7"
   }
 }
