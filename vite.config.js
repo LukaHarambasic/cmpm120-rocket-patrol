@@ -1,3 +1,3 @@
 export default {
-  main: '/cmpm120-rocket-patrol/',
+  base: '/cmpm120-rocket-patrol/',
 }
