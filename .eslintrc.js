@@ -25,5 +25,6 @@ module.exports = {
     window: true,
     document: true,
     console: true,
+    localStorage: true,
   },
 }
