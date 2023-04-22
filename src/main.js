@@ -72,5 +72,3 @@ const CONFIG = {
 }
 
 new Game(CONFIG)
-
-console.log('main.js loaded')

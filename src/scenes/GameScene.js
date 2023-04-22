@@ -22,7 +22,6 @@ export class GameScene extends Scene {
   }
 
   create() {
-    console.log('create gameScene')
     // background
     this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0)
 
@@ -55,11 +54,14 @@ export class GameScene extends Scene {
     this.ship03 = new Ship(this, WIDTH, BORDER_UI_SIZE * 6 + BORDER_PADDING * 4, 'spaceship', 0, 10).setOrigin(0, 0)
 
     // animation
-    this.anims.create({
-      key: 'explode',
-      frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0 }),
-      frameRate: 30,
-    })
+    // TODO also could be a helper function
+    if (!this.anims.exists('explode')) {
+      this.anims.create({
+        key: 'explode',
+        frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0 }),
+        frameRate: 30,
+      })
+    }
 
     // score
     this.p1Score = 0

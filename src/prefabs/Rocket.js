@@ -10,7 +10,6 @@ export class Rocket extends GameObjects.Sprite {
     this.sfxRocket = scene.sound.add('sfx_rocket')
 
     this.keyF = this.scene.input.keyboard.addKey(Input.Keyboard.KeyCodes.F)
-    this.keyR = this.scene.input.keyboard.addKey(Input.Keyboard.KeyCodes.R)
     this.keyLEFT = this.scene.input.keyboard.addKey(Input.Keyboard.KeyCodes.LEFT)
     this.keyRIGHT = this.scene.input.keyboard.addKey(Input.Keyboard.KeyCodes.RIGHT)
   }
