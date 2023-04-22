@@ -75,7 +75,7 @@ export class GameScene extends Scene {
 
     // clock
     this.clock = this.time.delayedCall(
-      Storage.getTimer(),
+      Storage.timer,
       () => {
         this.add.text(WIDTH / 2, HEIGHT / 2, 'GAME OVER', GAME_OVER).setOrigin(0.5)
         this.add.text(WIDTH / 2, HEIGHT / 2 + 64, 'Press (R) to Restart or ← to Menu', GAME_OVER).setOrigin(0.5)

@@ -1,17 +1,17 @@
 export class Storage {
-  static setSpeed(speed) {
+  static set speed(speed) {
     localStorage.setItem('speed', speed)
   }
 
-  static getSpeed() {
+  static get speed() {
     return localStorage.getItem('speed') || 3 // easy mode
   }
 
-  static setTimer(timer) {
+  static set timer(timer) {
     localStorage.setItem('timer', timer)
   }
 
-  static getTimer() {
+  static get timer() {
     return localStorage.getItem('timer') || 60 * 1000 // easy mode
   }
 }

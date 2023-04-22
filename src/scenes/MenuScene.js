@@ -8,7 +8,6 @@ export class MenuScene extends Scene {
   }
 
   preload() {
-    // load audio
     this.load.audio('sfx_select', './audio/blip_select12.wav')
     this.load.audio('sfx_explosion', './audio/explosion38.wav')
     this.load.audio('sfx_rocket', './audio/rocket_shot.wav')
@@ -44,8 +43,8 @@ export class MenuScene extends Scene {
   }
 
   _startGame(speed, timer) {
-    Storage.setSpeed(speed)
-    Storage.setTimer(timer)
+    Storage.speed = speed
+    Storage.timer = timer
     this.sound.play('sfx_select')
     this.scene.start('gameScene')
   }
